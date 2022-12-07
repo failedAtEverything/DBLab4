@@ -1,0 +1,22 @@
+﻿@using WebApp.Models;
+
+@{
+    var model = Model;
+}
+
+<div style="height:65vh; width:100%; overflow-y: scroll">
+    <table border="1" style="width: 100%">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        @foreach (var item in model) {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+    </table>
+</div>
